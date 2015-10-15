@@ -252,7 +252,7 @@ public abstract class AbstractBeanstalkMojo extends
   }
 
   public String ensureSuffixStripped(String cnamePrefix) {
-    return defaultString(cnamePrefix).replaceAll("\\Q.elasticbeanstalk.com\\E$", "");
+    return defaultString(cnamePrefix).replaceAll("\\Q.elasticbeanstalk.com\\E$", "").replaceAll("\\Q.eb.amazonaws.com.cn\\E$", "");
   }
 
 
