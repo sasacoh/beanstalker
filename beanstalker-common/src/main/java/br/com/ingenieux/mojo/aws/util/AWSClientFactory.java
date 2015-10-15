@@ -57,7 +57,7 @@ public class AWSClientFactory {
   }
 
   protected String getEndpointFor(ServiceEndpointFormatter formatter) {
-    return format(formatter.serviceMask, region);
+    return format(formatter.serviceMask, region, "amazonaws.com" + (region.startsWith("cn-") ? ".cn" : ""));
   }
 
 }

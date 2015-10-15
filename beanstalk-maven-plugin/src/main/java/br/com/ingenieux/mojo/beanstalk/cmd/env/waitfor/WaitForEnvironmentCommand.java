@@ -112,7 +112,7 @@ public class WaitForEnvironmentCommand extends
       });
 
       info("... with environmentId equal to '%s'", environmentRef);
-    } else if (environmentRef.matches(".*\\Q.elasticbeanstalk.com\\E")) {
+    } else if (environmentRef.matches(".*\\Q.elasticbeanstalk.com\\E") || environmentRef.matches(".*\\Q.eb.amazonaws.com.cn\\E")) {
       result.add(new Predicate<EnvironmentDescription>() {
         @Override
         public boolean apply(EnvironmentDescription t) {
